@@ -1,4 +1,7 @@
 .logicBox {
   color: #646464;
   background-color: #c8c8c8;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
 }
