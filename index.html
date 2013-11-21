@@ -3,6 +3,20 @@
 	<head>
 		<title>Logic Box Game</title>
 
+		<meta name="Generator" content="Rafael Cosman">
+		<meta name="Author" content="Rafael Cosman">
+		<meta name="KeyWords" content="logic box, game, learn computer science">
+		<meta name="Description" content="A game for learning Computer Science">
+		<meta name="country" content="United States">
+		<meta name="organization-Email" content="rafaelc@stanford.edu">
+		<!-- <meta name="copyright" content="copyright 2005 - Alf Magne Kalleland"> -->
+		<meta name="coverage" content="Worldwide">
+		<!-- <meta name="revisit_after" content="30days"> -->
+		<!-- <meta name="identifier" content="http://www..com/"> -->
+		<meta name="language" content="English">
+		<meta name="robots" content="follow">
+		<meta name="googlebot" content="index, follow">
+
 		<!-- begin olark code -->
 		<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 		f[z]=function(){
@@ -37,8 +51,19 @@
 	</head>
 
 	<body background="background.jpg">
-		<div id="LB" class="logicBox">This is a logicbox</div>
-		<div id="LB" class="logicBox">another one</div>
-		<div id="LB" class="logicBox">third one</div>
+		<div id="placeWhereLogicBoxesSitWhenNotInUse">
+			<div class="logicBox">This is a logicbox<div class="logicBoxArrow">LOL</div></div>
+			<div class="logicBox">another one</div>
+			<div class="logicBox">third one</div>
+		</div>
+
+		<table id="gridTable" class="gridTable"><tbody></tbody></table>
+
+		<div id="buttonBox">
+			<h1>Tests</h1>
+			<button type="button">Run all tests</button>
+			<button type="button">ABC -> BCA</button>
+			<button type="button">AB -> BA</button>
+		</div>
 	</body>
 </html>

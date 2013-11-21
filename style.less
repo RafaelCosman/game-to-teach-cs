@@ -1,11 +1,104 @@
+@import "mixins.less";
+
+* {
+	.unselectable;
+}
+
 .logicBox {
+	transition: width .1s, height .1s, background-color .1s;
+
+	z-index: 10;
+	margin: 0 auto;
+
 	color: rgb(100, 100, 100);
 	background-color: rgb(200, 200, 200);
 
 	width: 100px;
 	height: 100px;
 
-	border-radius: 100px;
+	.rounded-corners;
 
-	text-align: center;
+	&:hover {
+		z-index: 20;
+		background-color: rgb(210, 210, 210);
+
+		width: 105px;
+		height:105px;
+	}
+	&:active {
+		z-index: 30;
+		background-color: rgb(220, 220, 220);
+
+		width: 108px;
+		height:108px;
+	}
+}
+
+.logicBoxArrow {
+	transition: width .1s, height .1s, background-color .1s;
+
+	z-index: 30;
+	background-color: rgb(255, 255, 255);
+
+	width: 20px;
+	height: 20px;
+
+	.rounded-corners;
+
+	&:hover {
+		width: 30px;
+		height: 30px;
+	}
+	&:active {
+		width: 32px;
+		height:32px;
+	}
+}
+
+.gridCell {
+	transition: background-color .1s;
+
+	z-index: -10;
+	background-color: rgba(255, 255, 255, 60%);
+
+	width: 120px;
+	height: 120px;
+
+	&.drop-hover {
+		background-color: rgb(150, 100, 100);
+	}
+
+	&.filled {
+		background-color: rgb(120, 0, 0);
+	}
+}
+
+.gridTable {
+	z-index: -20;
+	position:absolute;
+	left: 150px;
+	top: 50px;
+
+	background-color: rgba(0, 0, 0, 10%)
+}
+
+#placeWhereLogicBoxesSitWhenNotInUse {
+	z-index: -2;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100px;
+
+	background-color: rgba(0, 0, 0, 20%)
+}
+
+#buttonBox {
+	position:absolute;
+	top:10px;
+	right: 10px;
+}
+
+button {
 }
