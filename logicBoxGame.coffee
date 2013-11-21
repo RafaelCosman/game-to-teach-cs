@@ -1,5 +1,6 @@
 $ = jQuery
 
-($ ".logicBox").draggable()
+$ ->
+  $(".logicBox").draggable()
 
 console.log "TEST"
