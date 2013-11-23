@@ -36,6 +36,87 @@
   width: 108px;
   height: 108px;
 }
+.startBox {
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  z-index: 10;
+  margin: 0 auto;
+  color: #646464;
+  background-color: #c8c8c8;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  background-color: #000000;
+}
+.startBox:hover {
+  z-index: 20;
+  background-color: #d2d2d2;
+  width: 105px;
+  height: 105px;
+}
+.startBox:active {
+  z-index: 30;
+  background-color: #dcdcdc;
+  width: 108px;
+  height: 108px;
+}
+.copyBox {
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  z-index: 10;
+  margin: 0 auto;
+  color: #646464;
+  background-color: #c8c8c8;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  background-color: #0000ff;
+}
+.copyBox:hover {
+  z-index: 20;
+  background-color: #d2d2d2;
+  width: 105px;
+  height: 105px;
+}
+.copyBox:active {
+  z-index: 30;
+  background-color: #dcdcdc;
+  width: 108px;
+  height: 108px;
+}
+.deleteBox {
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  z-index: 10;
+  margin: 0 auto;
+  color: #646464;
+  background-color: #c8c8c8;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  background-color: #ff0000;
+}
+.deleteBox:hover {
+  z-index: 20;
+  background-color: #d2d2d2;
+  width: 105px;
+  height: 105px;
+}
+.deleteBox:active {
+  z-index: 30;
+  background-color: #dcdcdc;
+  width: 108px;
+  height: 108px;
+}
 .logicBoxArrow {
   transition: width 0.1s, height 0.1s, background-color 0.1s;
   z-index: 30;
@@ -76,7 +157,7 @@
   top: 50px;
   background-color: rgba(0, 0, 0, 0.1);
 }
-#placeWhereLogicBoxesSitWhenNotInUse {
+.toolBox {
   z-index: -2;
   position: absolute;
   top: 0px;
