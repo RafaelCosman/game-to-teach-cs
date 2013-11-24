@@ -51,19 +51,21 @@
 	</head>
 
 	<body background="background.jpg">
-		<div class="toolBox">
-			<div class="startBox logicBox"><div class="logicBoxArrow"></div></div>
-			<div class="copyBox logicBox"><div class="logicBoxArrow"></div></div>
-			<div class="deleteBox logicBox"><div class="logicBoxArrow"></div></div>
-		</div>
+		<div class="gameBoard">
+			<div class="toolBox">
+				<div class="startBox logicBox"><div class="logicBoxArrow"></div></div>
+				<div class="copyBox logicBox"><div class="logicBoxArrow"></div></div>
+				<div class="deleteBox logicBox"><div class="logicBoxArrow"></div></div>
+			</div>
 
-		<table id="gridTable" class="gridTable"><tbody></tbody></table>
+			<table id="gridTable" class="gridTable"><tbody></tbody></table>
 
-		<div id="buttonBox">
-			<h1>Tests</h1>
-			<button type="button">Run all tests</button>
-			<button type="button">ABC -> BCA</button>
-			<button type="button">AB -> BA</button>
+			<div id="buttonBox">
+				<h1>Tests</h1>
+				<button type="button">Run all tests</button>
+				<button type="button" class="testButton">ABC -> BCA</button>
+				<button type="button" class="testButton">AB -> BA</button>
+			</div>
 		</div>
 	</body>
 </html>

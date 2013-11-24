@@ -10,38 +10,12 @@
   -webkit-user-select: none;
   -o-user-select: none;
 }
-.logicBox {
-  transition: width 0.1s, height 0.1s, background-color 0.1s;
-  z-index: 10;
-  margin: 0 auto;
-  color: #646464;
-  background-color: #c8c8c8;
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 999px;
-  -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
-  border-radius: 999px;
-}
-.logicBox:hover {
-  z-index: 20;
-  background-color: #d2d2d2;
-  width: 105px;
-  height: 105px;
-}
-.logicBox:active {
-  z-index: 30;
-  background-color: #dcdcdc;
-  width: 108px;
-  height: 108px;
-}
 .startBox {
   transition: width 0.1s, height 0.1s, background-color 0.1s;
   z-index: 10;
   margin: 0 auto;
   color: #646464;
-  background-color: #c8c8c8;
+  background-color: #000000;
   width: 100px;
   height: 100px;
   -webkit-border-radius: 999px;
@@ -49,17 +23,16 @@
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
   border-radius: 999px;
-  background-color: #000000;
 }
 .startBox:hover {
   z-index: 20;
-  background-color: #d2d2d2;
+  background-color: #1a1a1a;
   width: 105px;
   height: 105px;
 }
 .startBox:active {
   z-index: 30;
-  background-color: #dcdcdc;
+  background-color: #333333;
   width: 108px;
   height: 108px;
 }
@@ -68,7 +41,7 @@
   z-index: 10;
   margin: 0 auto;
   color: #646464;
-  background-color: #c8c8c8;
+  background-color: #0000ff;
   width: 100px;
   height: 100px;
   -webkit-border-radius: 999px;
@@ -76,17 +49,16 @@
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
   border-radius: 999px;
-  background-color: #0000ff;
 }
 .copyBox:hover {
   z-index: 20;
-  background-color: #d2d2d2;
+  background-color: #3333ff;
   width: 105px;
   height: 105px;
 }
 .copyBox:active {
   z-index: 30;
-  background-color: #dcdcdc;
+  background-color: #6666ff;
   width: 108px;
   height: 108px;
 }
@@ -95,7 +67,7 @@
   z-index: 10;
   margin: 0 auto;
   color: #646464;
-  background-color: #c8c8c8;
+  background-color: #ff0000;
   width: 100px;
   height: 100px;
   -webkit-border-radius: 999px;
@@ -103,17 +75,16 @@
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
   border-radius: 999px;
-  background-color: #ff0000;
 }
 .deleteBox:hover {
   z-index: 20;
-  background-color: #d2d2d2;
+  background-color: #ff3333;
   width: 105px;
   height: 105px;
 }
 .deleteBox:active {
   z-index: 30;
-  background-color: #dcdcdc;
+  background-color: #ff6666;
   width: 108px;
   height: 108px;
 }
@@ -170,4 +141,9 @@
   position: absolute;
   top: 10px;
   right: 10px;
+}
+.testString {
+  position: absolute;
+  color: #c8c8c8;
+  transition: top 1s, left 1s;
 }

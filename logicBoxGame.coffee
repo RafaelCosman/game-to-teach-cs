@@ -7,12 +7,12 @@ $ ->
 			<tr>
   		""")
 		for j in [0...3]
-			($ "#gridTable>tbody").append("""
+			($ "#gridTable>tbody").append """
   				<td><div class="gridCell"></div></td>
-  			""")
-		($ "#gridTable>tbody").append("""
+  			"""
+		($ "#gridTable>tbody").append """
   			</tr>
-  		""")
+  		"""
 
 		($ ".gridCell,.toolBox").droppable {
 			hoverClass: "drop-hover",
@@ -38,8 +38,8 @@ $ ->
 
 			distance = 50
 
-			ui.position.left = Math.cos(angle) * -distance + parent.width() / 2 - ui.helper.width() / 2
-			ui.position.top = Math.sin(angle) * -distance + parent.height() / 2 - ui.helper.height() / 2
+			ui.position.left = (Math.cos angle) * -distance + parent.width() / 2 - ui.helper.width() / 2
+			ui.position.top = (Math.sin angle) * -distance + parent.height() / 2 - ui.helper.height() / 2
 		,
 		stop: (ev, ui) ->
 			parent = ui.helper.parent()
@@ -50,21 +50,14 @@ $ ->
 
 			ui.helper.css {left: Math.cos(angle) * -distance + parent.width() / 2 - ui.helper.width() / 2}
 			ui.helper.css {top:  Math.sin(angle) * -distance + parent.height() / 2 - ui.helper.height() / 2}
-
-			#ui.helper.css {left : 0}
-			#ui.helper.css {top : 0}
 	}
 
 	($ ".logicBoxArrow").offset {top:20 + $(this).parent().offset.top, left:$(this).parent().offset.left}
 
-computeAngleFromParent = (ui) ->
-	parent = ui.helper.parent()
-
-	dx = ui.position.left - (parent.width() / 2 - ui.helper.width() / 2)
-	dy = ui.position.top - (parent.height() / 2 - ui.helper.height() / 2)
-			
-	angle = Math.atan(dy / dx)
-	if dx > 0
-		angle += Math.PI
-
-	angle
+	#buttons
+	($ ".testButton").click(->
+		($ ".gameBoard").append """
+			<div class="testString">TEST</div>
+		"""
+		($ ".testString").css {left:"50px", top:"100px"}
+	)

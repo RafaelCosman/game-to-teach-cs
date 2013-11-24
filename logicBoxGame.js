@@ -6,6 +6,18 @@
     return Math.sqrt(x * x + y * y);
   };
 
+  computeAngleFromParent = function(ui) {
+    var angle, dx, dy, parent;
+    parent = ui.helper.parent();
+    dx = ui.position.left - (parent.width() / 2 - ui.helper.width() / 2);
+    dy = ui.position.top - (parent.height() / 2 - ui.helper.height() / 2);
+    angle = Math.atan(dy / dx);
+    if (dx > 0) {
+      angle += Math.PI;
+    }
+    return angle;
+  };
+
   /* --------------------------------------------
        Begin logicBoxGame.coffee
   --------------------------------------------
@@ -44,8 +56,8 @@
         parent = ui.helper.parent();
         angle = computeAngleFromParent(ui);
         distance = 50;
-        ui.position.left = Math.cos(angle) * -distance + parent.width() / 2 - ui.helper.width() / 2;
-        return ui.position.top = Math.sin(angle) * -distance + parent.height() / 2 - ui.helper.height() / 2;
+        ui.position.left = (Math.cos(angle)) * -distance + parent.width() / 2 - ui.helper.width() / 2;
+        return ui.position.top = (Math.sin(angle)) * -distance + parent.height() / 2 - ui.helper.height() / 2;
       },
       stop: function(ev, ui) {
         var angle, distance, parent;
@@ -61,22 +73,17 @@
         });
       }
     });
-    return ($(".logicBoxArrow")).offset({
+    ($(".logicBoxArrow")).offset({
       top: 20 + $(this).parent().offset.top,
       left: $(this).parent().offset.left
     });
+    return ($(".testButton")).click(function() {
+      ($(".gameBoard")).append("<div class=\"testString\">TEST</div>");
+      return ($(".testString")).css({
+        left: "50px",
+        top: "100px"
+      });
+    });
   });
-
-  computeAngleFromParent = function(ui) {
-    var angle, dx, dy, parent;
-    parent = ui.helper.parent();
-    dx = ui.position.left - (parent.width() / 2 - ui.helper.width() / 2);
-    dy = ui.position.top - (parent.height() / 2 - ui.helper.height() / 2);
-    angle = Math.atan(dy / dx);
-    if (dx > 0) {
-      angle += Math.PI;
-    }
-    return angle;
-  };
 
 }).call(this);
