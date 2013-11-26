@@ -1,6 +1,6 @@
 dist = (x, y) ->
 	Math.sqrt(x*x + y*y)
-	
+
 computeAngleFromParent = (ui) ->
 	parent = ui.helper.parent()
 
@@ -12,3 +12,11 @@ computeAngleFromParent = (ui) ->
 		angle += Math.PI
 
 	angle
+
+setCenter = (selector, offsets) ->
+	($ selector).css {left: offsets.left - ($ selector).width() / 2, top: offsets.top - ($ selector).height() / 2}
+
+getCenter = (selector) ->
+	tag = ($ selector)
+	offset = tag.offset()
+	{left: offset.left + tag.width() / 2, top: offset.top + tag.height() / 2}

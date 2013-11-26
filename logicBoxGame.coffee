@@ -48,16 +48,18 @@ $ ->
 			distance = 50
 			angle = Math.round(angle * 4 / (2 * Math.PI)) / (4 / (2 * Math.PI))
 
-			ui.helper.css {left: Math.cos(angle) * -distance + parent.width() / 2 - ui.helper.width() / 2}
-			ui.helper.css {top:  Math.sin(angle) * -distance + parent.height() / 2 - ui.helper.height() / 2}
+			setCenter ui.helper, {left: Math.cos(angle) * -distance + parent.width() / 2, top: Math.sin(angle) * -distance + parent.height() / 2}
 	}
+	setCenter ".logicBoxArrow", {left: ($ ".logicBox").width(), top: ($ ".logicBox").height() / 2}
 
-	($ ".logicBoxArrow").offset {top:20 + $(this).parent().offset.top, left:$(this).parent().offset.left}
+	#($ ".logicBoxArrow").offset {top:20 + $(this).parent().offset.top, left:$(this).parent().offset.left}
 
 	#buttons
 	($ ".testButton").click(->
 		($ ".gameBoard").append """
 			<div class="testString">TEST</div>
 		"""
-		($ ".testString").css {left:"50px", top:"100px"}
+		setCenter ".testString", getCenter(".startBox")
+
+		($ ".testString") 
 	)
